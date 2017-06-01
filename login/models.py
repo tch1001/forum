@@ -7,11 +7,4 @@ class User(models.Model):
     email = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.username + " : " + self.password
-
-class Post(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.DateField()
-    title = models.CharField(max_length=50)
-    content = models.CharField(max_length = 500)
-    
+        return self.username
