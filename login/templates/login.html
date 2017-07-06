@@ -18,7 +18,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Simple login form</title>
+  <title>Login</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
         {% load static %}
@@ -117,16 +117,13 @@ html {
   <div class="container">
   <div class="login">
   	<h1 class="login-heading">
-      <strong>Meow!</strong> Please login. :D</h1>
+      Login</h1>
       <form method="post" action="/">
           {% csrf_token %}
           {{ form }}
           <div class="login-footer" style='color:white'>
              <a href="/register/" class="lnk">
               Register
-            </a> |
-	    <a href="" class="lnk">
-		Oops, I've forgotten something
             </a>
             <button type="submit" class="btn btn--right">Sign in</button>
               {% if failed %}
