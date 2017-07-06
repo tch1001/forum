@@ -17,3 +17,14 @@ class DiscussionComment(models.Model):
     date = models.DateField()
     content = models.CharField(max_length=500)
 
+class Question(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+    title = models.CharField(max_length=50)
+    content = models.CharField(max_length = 500)
+
+class QuestionComment(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    parent = models.ForeignKey(Question, on_delete = models.CASCADE)
+    date = models.DateField()
+    content = models.CharField(max_length = 500)

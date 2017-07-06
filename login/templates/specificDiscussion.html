@@ -9,9 +9,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script>
+        function scrollDown(){
+            commentsDiv = document.getElementById('comments')
+            commentsDiv.scrollTop = commentsDiv.scrollHeight
+        }
+    </script>
 </head>
-<body>
+<body onload="scrollDown()">
 <style>
     div.heading{
         padding-left: 1.4em;
@@ -30,8 +35,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/home/">Meow</a>
+      </button><a class="navbar-brand" href="/home/"><img height='40px' width = '30px' src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Raffles_Institution_Coat_of_Arms.svg/1200px-Raffles_Institution_Coat_of_Arms.svg.png"/></a>
+
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
@@ -53,9 +58,9 @@
 </h4>
 <h5>
     - by {{discussionData.author}} on {{discussionData.date}}
-</h5><br>
+</h5><hr>
 </div>
-<div style="overflow-y: scroll; height: 400px;" class="comments"><hr>
+<div style="overflow-y: scroll; height: 400px;" class="comments" id="comments"><hr>
 {% for comment in comments %}
     <p class="comment">{{comment.content}}</p>
 <strong>
@@ -63,11 +68,12 @@
     <hr>
 </strong>
 {% endfor %}
+</div>
+<hr>
 <form action="postComment/" method="POST">
     {% csrf_token %}
-    <input type="text" name="comment"/>
+    <textarea name="comment" style="width: 100%; height:100px;"></textarea>
     <input type="submit"/>
 </form>
-</div>
 </body>
 </html>

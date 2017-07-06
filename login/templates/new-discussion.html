@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <style>
+    <meta charset="UTF-8">
+    <title>New Discussion</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -42,24 +49,11 @@
     background-color: #3e8e41;
 }
 </style>
-    <style>
-    div.questions{
-        padding-left: 1.2em;
-    }
-    p.heading{
-        padding-left: 0.3em;
-    }
-    p.comments{
-        padding-left: 1em;
-    }
-</style>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function validateAndConfirm(){
+            return true;
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -75,12 +69,11 @@
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
       <li><a href="/home/">Home</a></li>
-      <li class="active"><a href="/home/discussions">Discussions</a></li>
-      <li><a href="/home/questions">Questions</a></li>
+      <li><a href="/home/discussions">Discussions</a></li>
+      <li class="active"><a href="/home/questions">Questions</a></li>
       <li><a href="/home/announcements">Announcements</a></li>
       <li><a href="/home/profile/">Profile</a></li>
     </ul>
-
         <ul class="nav nav-bar-nav navbar-right">
             <div class="dropdown">
   <button class="dropbtn" style="color:white;">+</button>
@@ -92,28 +85,19 @@
         </ul>
   </div>
   </div>
-</nav>
-<style>
-    div.discussion{
-        padding-left: 1.2em;
-    }
-    p.heading{
-        padding-left: 0.3em;
-    }
-    p.comments{
-        padding-left: 1em;
-    }
-</style>
-{% for d in discussions %}
-<div class="discussion">
-    <strong>
-        <a href="/home/discussions/{{d.title}}">{{ d.title }}</a>
-    </strong>
-    <p class="heading">{{d.content}}</p>
 
-    <hr>
-</div>
-<br>
-{% endfor %}
+
+</nav>
+
+
+
+
+<form action="." method="POST" onsubmit="return validateAndConfirm()">
+    {% csrf_token %}
+    <input type="text" name="title"/><br>
+    <textarea name="content"></textarea>
+    <input type="submit"/>
+</form>
+
 </body>
 </html>

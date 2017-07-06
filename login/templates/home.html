@@ -18,7 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/home/">Meow</a>
+      <a class="navbar-brand" href="/home/"><img height='40px' width = '30px' src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Raffles_Institution_Coat_of_Arms.svg/1200px-Raffles_Institution_Coat_of_Arms.svg.png"/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
@@ -28,8 +28,129 @@
       <li><a href="/home/announcements">Announcements</a></li>
       <li><a href="/home/profile/">Profile</a></li>
     </ul>
+            <style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+    <style>
+    div.questions{
+        padding-left: 1.2em;
+    }
+    p.heading{
+        padding-left: 0.3em;
+    }
+    p.comments{
+        padding-left: 1em;
+    }
+</style>
+
+        <ul class="nav nav-bar-nav navbar-right">
+            <div class="dropdown">
+  <button class="dropbtn" style="color:white;">+</button>
+  <div class="dropdown-content">
+    <a href="/home/new-discussion">New Discussion</a>
+    <a href="/home/new-question">New Question</a>
+  </div>
+</div>
+        </ul>
   </div>
   </div>
+
 </nav>
+
+
+<style>
+    div.home{
+        padding-left: 1.2em;
+    }
+    p.heading{
+        padding-left: 0.3em;
+    }
+    p.comments{
+        padding-left: 1em;
+    }
+</style>
+<div class="home">
+    <p class="heading"><strong>Intro: </strong>Hello! This is a (informal) forum created mostly by Tan Chien Hao (me).<br>
+    I am a Year 2 in 2017 (the year when this came out) and this was part of my
+     plan to improve the school as promised in my campaign for RIPB. I hope you enjoy this platform
+        where everyone can ask each other questions <a href='/home/questions/'>(here)</a>,
+        discuss issues <a href="/home/discussions/">(here)</a>. There will also be announcements.
+    If you wish to add an announcement, you may do so by contacting me at <strong>tanchienhao@gmail.com</strong>.
+    <br>(and of course, they will be evaluated for "suitability" xP)</p>
+
+    <hr>
+
+    <p class="heading">
+        <strong>Functionality: </strong>
+        This is nothing like facebook or twitter or any other social media though. It is just a little web app done in Django (Python)!
+        <br><br><strong>Features:</strong><br>
+        <a href="/home/discussions/">Discussion:</a> Just discussions! You can leave comments on "topics", or create your own topic. (like a post on Facebook, just no fancy stuff :(, sorry)<br>
+
+        <a href="/home/questions/">Questions:</a> Literally the same as discussions, just for asking questions (so discussions don't get too cluttered) <br>
+        <br>Do keep in mind that all questions and discussions (along with comments) are undeleteable (only can be done manually by me), so be careful what you post...
+        <br><br>
+        <a href="/home/profile/">Profile:</a> I haven't really thought of what to add here, but for now it's just a sign out button. Similarly, you could visit <a href="/signout/">this link</a> to sign out<br>
+    </p>
+
+    <hr>
+
+    <p class="heading">
+        <strong>Programmers!!!!: </strong>
+        Hello!! <a href="http://www.github.com/tch1001/forum/">Github Here!</a>
+        Feel free to contribute or contact me at <strong>tanchienhao@gmail.com</strong>
+        . Please don't mock me for this pretty bad website (especially CSS :P). And also please don't try to break or hack this Dx <br>(Link to discourage you: <a href="http://itstillworks.com/computer-hacking-crime-1387.html">http://itstillworks.com/computer-hacking-crime-1387.html</a>).
+    </p>
+
+    <hr>
+    <p class="heading">
+        <strong>Thank you: </strong>
+        Once again, Thank you a lot for your amazing support and this awesome journey together and I hope we will make the world a better place together!!!
+        <br><br><strong>Success is not final, Failure is not fatal, It is the courage to continue that counts. - Winston Churchill</strong>
+    </p>
+
+    <hr>
+</div>
+<br>
+
+
+
 </body>
 </html>

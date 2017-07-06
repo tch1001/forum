@@ -107,8 +107,10 @@ html {
           {% csrf_token %}
           {{ form }}
           <div class="login-footer" style='color:white'>
-              {% if failed %}
+              {% if failed == 1 %}
               <h6 style="color:red">Error: Passwords did not match</h6>
+              {% elif failed == 2%}
+              <h6 style="color:red">Error: Username already exists</h6>
               {% endif %}
             <button type="submit" class="btn btn--right">Sign Up</button>
           </div>

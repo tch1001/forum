@@ -17,8 +17,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/home/">Meow</a>
+      </button><a class="navbar-brand" href="/home/"><img height='40px' width = '30px' src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Raffles_Institution_Coat_of_Arms.svg/1200px-Raffles_Institution_Coat_of_Arms.svg.png"/></a>
+
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
@@ -28,8 +28,72 @@
       <li><a href="/home/announcements">Announcements</a></li>
       <li class="active"><a href="/home/profile/">Profile</a></li>
     </ul>
+
+        <style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+    <style>
+    div.questions{
+        padding-left: 1.2em;
+    }
+    p.heading{
+        padding-left: 0.3em;
+    }
+    p.comments{
+        padding-left: 1em;
+    }
+</style>
+
+        <ul class="nav nav-bar-nav navbar-right">
+            <div class="dropdown">
+  <button class="dropbtn" style="color:white;">+</button>
+  <div class="dropdown-content">
+    <a href="/home/new-discussion">New Discussion</a>
+    <a href="/home/new-question">New Question</a>
+  </div>
+</div>
+        </ul>
   </div>
   </div>
 </nav>
+<a style="padding-left: 1.2em;" href="/signout/">Sign Out</a>
 </body>
 </html>
